@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: hsl(202, 86%, 94%);
+}
+
+h1, h2, h3{
+    color: hsl(202, 55%, 16%);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h2{
+    color: hsl(61, 70%, 52%);
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 14px;
+    padding: 4px 4px 0;
+}
+
+p{
+    color: hsl(200, 26%, 54%);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.clear{
+    margin: 0;
+    text-decoration: underline;
+}
+.clear:hover{
+    cursor: pointer;
+}
+
+.calc{
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    margin: auto;
+    padding: 10px 25px;
+}
+
+.results{
+    background-color: hsl(202, 55%, 16%);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.main-body{
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 100px auto;
+    width: 70%;
+}
+
+.part-1 {
+    margin-top: -25px;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.M-select{
+    background-color: white;
+    border: 1px solid;
+    border-color:  hsl(200, 26%, 54%);
+    border-radius: 3px;
+    display: flex;
+    padding: 4px;
+    padding-bottom: 10px;
+}
+
+.btn1{
+    border: none;
+    display: flex;
+}
+.pHolder{
+    background-color: hsl(202, 86%, 94%);
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: none;
+    color: hsl(200, 26%, 54%);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 5px 15px;
+}
+.pHolder2 {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border-right: 1px solid;
+    border-top-left-radius: 0;
+    border-top-right-radius: 3px;
+}
+.pHoldError{
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+.inputError{
+    border-color: red;
+}
+.field-1{
+    border-bottom-left-radius: 0;
+    border-left: none;
+    border-top-left-radius: 0;
+}
+.field-2{
+    border-bottom-right-radius: 0;
+    border-right: none;
+    border-top-right-radius: 0;
+}
+.pHoldActive {
+    background-color: hsl(61, 70%, 52%);
+    border-color: hsl(61, 70%, 52%);
+    color: hsl(200, 26%, 54%);
+}
+
+input{
+    background-color: white;
+    border: 1px solid;
+    border-color: hsl(200, 26%, 54%);
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 5px 0 5px 5px;
+}
+input:hover{
+    cursor: pointer;
+}
+
+::placeholder{
+    background-color: hsl(202, 86%, 94%);
+    padding: 10px;
+    width: 5%;
+}
+
+#term{
+    width: 55%;
+}
+
+#rate{
+    width: 100%;
+}
+
+
+.term-rate{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Mortgage-type{
+    padding-bottom: 10px;
+    
+}
+button, .field-1{
+    width: 100%;
+}
+.M-select:hover {
+    border-color: hsl(61, 70%, 52%);
+}
+
+#radio{
+    margin: 7px;
+}
+
+.bottom{
+    padding: 30px 0;
+}
+
+#calc-repay{
+    background-color: hsl(61, 70%, 52%);
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 30px;
+    text-align: center;
+    width: auto;
+}
+#calc-repay:hover{
+    background-color: hsl(61, 76%, 81%);
+}
+
+#calc-img{
+    height: 30px;
+    width: 20px;
+}
+#calc-repay h3{
+    padding-top: 8px;
+    text-align: center;
+}
+
+.empty{
+    /* display: none; */
+}
+
+.empty-img{
+    margin: 100px auto 0;
+    text-align: center;
+    width: 50%;
+}
+
+.empty-img img{
+    height: 150px;
+    width: 150px;
+}
+
+.res{
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.instr{
+    text-align: center;
+}
+
+.not-empty{
+    display: none;
+    margin: auto;
+    padding:  30px 20px;
+}
+
+.your-res{
+    color: white;
+    font-size: 1rem;
+}
+
+.display-results{
+    background-color: hsl(201, 81%, 6%);
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+hr{
+    color: hsl(202, 86%, 94%);
+}
+
+.disp-res-contents{
+    border-top: 5px;
+    border-top-color: hsl(61, 70%, 52%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-style: solid;
+    margin: auto;
+    padding: 10px 25px;
+}
+
+.error{
+    color: red;
+    display: none;
+    font-size: 10px;
+    margin: 0;
+}
+
+
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 700px){
+    body{
+        background-color: inherit;
+
+    }
+    .main-body{
+        border-radius: 1px solid;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+    }
+    .title{
+        display: block;
+    }
+    .calc-main{
+        margin: auto;
+    }
+    .term-rate{
+        display: block;
+    }
+    #term{
+        width: 100%;
+    }
+    #calc-repay{
+        display: inline-flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    .M-select:hover {
+        background-color: hsla(61, 70%, 52%, 0.2);
+        border-color: hsl(61, 70%, 52%);
+    }
+    .radio{
+        background-color: hsla(61, 70%, 52%, 0.2);
+    }
+    #calc-img{
+        /* display: none; */
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .results {
+        background-color: hsl(202, 55%, 16%);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .empty-img{
+        margin-top: 20px;
+    }
+    .res{
+        padding-top: 10px;
+    }
+    .instr{
+        margin: auto;
+        padding-bottom: 20px;
+        width: 90%;
+    }
+}
