@@ -16,6 +16,7 @@ function calcMortgage() {
     $("#show-interest").html("£" + interest.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 
 
+    // ERROR HANDLING
     if (p === "") {
         $("#principal-empty").show();
         $(".inpError1").addClass("pHoldError");
@@ -74,6 +75,7 @@ function calcMortgage() {
         }
     if (mortgageType[0].checked === true || mortgageType[1].checked === true) {
             $("#radio-error").hide();
+            $("mortgageType")[0].addClass("type-button-clicked");
         }
         else {
             $("#radio-error").show();
@@ -94,19 +96,33 @@ $("#rate").on("focus", function () {
     $(".inpError6").addClass("pHoldActive");
 });
 $("input").on("blur", function () {
-    $("input").removeClass("pHoldActive");
+    $("input, .pHolder").removeClass("pHoldActive");
+});
+
+$(".M-select1").on("click", function () {
+    $(".radio")[0].checked = true;
+    $(".M-select1").addClass("select-radio");
+    $(".M-select2").removeClass("select-radio");
+});
+$(".M-select2").on("click", function () {
+    $(".radio")[1].checked = true;
+    $(".M-select2").addClass("select-radio");
+    $(".M-select1").removeClass("select-radio");
 });
 
 
 // CLEAR ALL
 $("#allClear").click(function() { 
-    $("#principal").val(""); 
+    $("#principal").val("");
     $("#term").val("");
     $("#rate").val("");
     $(".error").hide();
     $(".empty").show();
     $(".not-empty").hide();
-    $("input").removeClass("pHoldError inputError");
-    $(".radio")[0].checked === false;
+    $("input, .pHolder").removeClass("pHoldError inputError");
+    $(".radio")[0].checked = false;
+    $(".radio")[1].checked = false;
+    $(".M-select1").removeClass("select-radio");
+    $(".M-select2").removeClass("select-radio");
 });
 

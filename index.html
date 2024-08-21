@@ -25,55 +25,63 @@
         <div class="row calc-main">
             <div class="calc col-lg-6 col-md-12">
                 <div class="title">
-                    <h1>Mortgage Calculator</h1>
-                    <p class="clear" id="allClear">Clear All</p>
+                    <h1 class="header">Mortgage Calculator</h1>
+                    <p role="button" class="clear" id="allClear">Clear All</p>
                 </div>
 
                 <div class="part-1">
                     <div>
-                        <p>Mortgage Amount</p>
-                        <button class="btn1">
-                            <input type="button" class="pHolder inpError1" value="£">
-                            <input type="number" class="field-1 inpError2" id="principal">
-                        </button>
+                        <label for="MortgageAmount"><p>Mortgage Amount</p></label>
+                        <div class="btn1">
+                            <em id="years" class="pHolder inpError1">£</em>
+                            <input type="text" class="field-1 inpError2" id="principal">
+                        </div>
                         <p class="error" id="principal-empty">This field is required</p>
                     </div>
                     <div class="term-rate">
-                        <div class="part1 col-lg-6">
-                            <p>Mortgage Term</p>
-                            <button class="btn1">
-                                <input type="number" class="field-2 inpError3" id="term">
-                                <input type="button" class="pHolder pHolder2 inpError4" value="years">
-                            </button>                           
+                        <div class="term">
+                            <label for="MortgageTerm">
+                                <p>Mortgage Term</p>
+                            </label>
+                            <div class="btn1">
+                                <input type="text" class="field-2 inpError3" id="term">
+                                <em id="years" class="pHolder pHolder2 inpError4">years</em>
+                            </div>
                             <p class="error" id="term-empty">This field is required</p>
                         </div>
-                        <div class="part2 col-lg-6">
-                            <p>Interest Rate</p>
-                            <button class="btn1">
-                                <input type="number" class="field-2 inpError5" id="rate">
-                                <input type="button" class="pHolder pHolder2 inpError6"  value="%">
-                            </button>
+                        <div class="term">
+                            <label for="InterestRate">
+                                <p>Interest Rate</p>
+                            </label>
+                            <div class="btn1">
+                                <input type="text" class="field-2 inpError5" id="rate">
+                                <em id="years" class="pHolder pHolder2 inpError6">%</em>
+                            </div>
                             <p class="error" id="rate-empty">This field is required</p>
                         </div>
                     </div>
+
+                    <!--MORTGAGE TYPE RADIO SELECTION-->
                     <div>
-                        <p>Mortgage Type</p>
-                        <div  class="Mortgage-type">
-                            <button class="M-select">
-                                <input type="radio" name="m-type" value="Repayment" class="radio" id="radio"> <h3>Repayment</h3>
-                            </button>
+                        <label for="Mortgage type">
+                            <p>Mortgage Type</p>
+                        </label>
+                        <div class="Mortgage-type">
+                            <div role="button" class="M-select M-select1">
+                                <input type="radio" name="m-type" value="Repayment" class="radio" id="radio1"> <h3>Repayment</h3>
+                            </div>
                         </div>
                         <div class="Mortgage-type">
-                            <button class="M-select">
-                                <input type="radio" name="m-type" value="Interest Only" class="radio" id="radio">
+                            <div role="button" class="M-select M-select2">
+                                <input type="radio" name="m-type" value="Interest Only" class="radio" id="radio2">
                                 <h3>Interest Only</h3>
-                            </button>
+                            </div>
                         </div>
                         <p class="error" id="radio-error">This field is required</p>
                     </div>
                     <div class="bottom">
-                        <button onclick="calcMortgage()" type="submit" class="M-select " id="calc-repay">
-                            <i><img src="./images/icon-calculator.svg" alt="Calculate Repayments" id="calc-img"></i>
+                        <button onclick="calcMortgage()" type="submit" class="M-select" id="calc-repay">
+                            <i><img src="./images/icon-calculator.svg" alt="show result" id="calc-img"></i>
                             <h3>Calculate Repayments</h3>
                         </button>
                     </div>
@@ -83,7 +91,7 @@
             <div class="results col-lg-6 col-md-12">
                 <div  class="empty">
                     <div class="empty-img">
-                        <img src="./images/illustration-empty.svg" alt="" id="empty-img">
+                        <img src="./images/illustration-empty.svg" alt="empty result" id="empty-img">
                     </div>
                     <h1 class="res">Results shown here</h1>
                     <p class="instr">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
@@ -97,14 +105,14 @@
 
                             <div class="show-interest">
                                 <p>Total Interest</p>
-                                <h2 id="show-interest"></h2>
+                                <h2 id="show-interest">Show interest</h2>
                             </div>
                             <div class="repayment">
                                 <p>Your monthly repayments</p>
-                                <h2 id="show-result"></h2>
+                                <h2 id="show-result">Monthly repayment</h2>
                                 <hr>
                                 <p>Total you'll repay over the term</p>
-                                <h1 class="your-res" id="total-pay"></h1>
+                                <h1 class="your-res" id="total-pay">Total repayment</h1>
                             </div>
                         </div>
                     </div>
